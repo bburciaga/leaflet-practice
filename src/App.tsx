@@ -1,25 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import { MapContainer, TileLayer } from 'react-leaflet';
+import HomePopup from './Components/HomePopup';
+import HomeVectorLayers from './Components/HomeVectorLayers';
+import TrailerParkTitle from './Components/TrailerParkTitle';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App mapid">
+      <MapContainer center={[53.91836, -122.64722]} zoom={13} scrollWheelZoom={false}>
+          <TileLayer
+            attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+            url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"/>
+          <HomeVectorLayers />
+      </MapContainer>
     </div>
+    
   );
 }
 
