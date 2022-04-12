@@ -6,7 +6,7 @@ import HomeVectorLayers from './Components/HomeVectorLayers';
 import AnimatedPanning from './Components/AnimatedPanning';
 import LatLngDisplay from './Components/LatLngDisplay';
 
-
+// App
 
 function App() {
   return (
